@@ -22,5 +22,5 @@ func main() {
 	}
 	defer cleanup()
 
-	http.Run(app, fmt.Sprintf(":%d", conf.GetInt("http.port")))
+	http.Run(app, fmt.Sprintf("0.0.0.0:%d", conf.GetInt("http.port")))
 }
