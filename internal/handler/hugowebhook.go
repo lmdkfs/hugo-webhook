@@ -23,8 +23,8 @@ type HugoWebhookHandler struct {
 }
 
 func (h *HugoWebhookHandler) UpdateWebSite(c *gin.Context) {
-
-	payload, err := github.ValidatePayload(c.Request, []byte("abcdefg"))
+	fmt.Printf("request: %+v\n", c.Request)
+	payload, err := github.ValidatePayload(c.Request, []byte("PkheGsB3fOypw6kw"))
 	if err != nil {
 		resp.HandleError(c, http.StatusBadRequest, 1, err.Error(), nil)
 	}

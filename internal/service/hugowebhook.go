@@ -17,6 +17,7 @@ func NewHugoWebHookService(service *Service) HugoWebHookService {
 }
 
 func (s *hugoWebHookService) UpdateWebSite() error {
-	fmt.Printf("hugoWebHookService UpdateWebSite")
+	fmt.Printf("----->\n")
+	fmt.Printf("hugoWebHookService UpdateWebSite\n")
 	return nil
 }
