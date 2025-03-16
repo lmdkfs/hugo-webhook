@@ -27,3 +27,5 @@ log:
   compress: true               # 是否压缩
 hugo:
   hugo_site_dir: /tmp/hugo_site
+  repo_url: ""
+  branch: master

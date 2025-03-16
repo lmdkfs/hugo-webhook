@@ -21,7 +21,7 @@ import (
 func NewWire(viperViper *viper.Viper, logger *log.Logger) (*gin.Engine, func(), error) {
 	handlerHandler := handler.NewHandler(logger)
 	serviceService := service.NewService(logger)
-	hugoWebHookService := service.NewHugoWebHookService(serviceService)
+	hugoWebHookService := service.NewHugoWebHookService(viperViper, serviceService)
 	hugoWebhookHandler := handler.NewHugoWebhookHandler(handlerHandler, hugoWebHookService)
 	engine := server.NewServerHTTP(logger, hugoWebhookHandler)
 	return engine, func() {
